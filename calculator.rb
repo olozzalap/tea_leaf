@@ -26,10 +26,10 @@ def run
 
 	puts "Now what is the first number you will be #{first_action}?"
 	print "> "
-	num1 = gets.chomp.to_i
+	num1 = gets.chomp.to_f
 	puts "Now what is the second number you will be #{second_action}?"
 	print "> "
-	num2 = gets.chomp.to_i
+	num2 = gets.chomp.to_f
 
 	if operation == "+"
 		result = num1 + num2
@@ -48,7 +48,7 @@ def run
 	print "> "
 	again = gets.chomp
 
-	if again == "y" or "yes"
+	if again == "y"
 		run
 	else
 		puts "Have a great day!!!"
