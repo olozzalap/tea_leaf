@@ -48,7 +48,7 @@ def run
 	print "> "
 	again = gets.chomp
 
-	if again == "y"
+	if again == "y" or "yes"
 		run
 	else
 		puts "Have a great day!!!"
