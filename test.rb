@@ -1,20 +1,24 @@
-  
-  
+hand = [['K', 'D'], ['A', 'S'], [8, 'C']]
+value = 0
+aces = 0
 
-  
-  def initialize (decks=1)
-    @@card_faces = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 'a']
-  @@card_suits = ['H', 'D', 'C', 'S']
-	@cards = []
-	decks.to_i.times do |deck|
-	  @@card_suits.each do |suit|
-	    @@card_faces.each do |face|
-	      @cards << [face, suit]
-		end
+for i in 0...hand.count
+	  if hand[i][0] == 'K' || hand[i][0] == 'J' || hand[i][0] == 'Q'
+	    value += 10
+		puts value
+	  elsif hand[i][0] == 'A'
+	    aces += 1
+		value += 1
+		puts value
+	  else
+        value += hand[i][0]
+		puts value
 	  end
-	end
-	@cards.shuffle!
-	print @cards.count
-  end
-  
-  initialize(15)
+	
+end
+	
+	puts value
+	puts aces
+	
+	print "\n \n \n"
+	 print hand[0][0]
